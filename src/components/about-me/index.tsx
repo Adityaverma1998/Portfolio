@@ -29,6 +29,7 @@ const skills: SkillProgressive[] = [
 const AboutMeSection = () => {
     return (
         <>
+
             <div className={'py-4 md:py-10 '}>
                 <div className={'w-full flex flex-col items-center justify-center'}>
                     <h2 className={'text-3xl font-semibold text-secondary'}>About Me</h2>
