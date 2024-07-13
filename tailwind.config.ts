@@ -12,7 +12,7 @@ const config: Config = {
             colors: {
 
                 primary: '#333333',       // Main content text color
-                secondary: '#666666',     // Less emphasized text color
+                secondary: '#ffffff',     // Less emphasized text color
                 accent: '#FD6F00',        // Highlighted or link text color
                 muted: '#959595',         // Subtle or disabled text color
                 light: '#DFDFDF',         // Text color for light content on dark backgrounds
@@ -20,7 +20,7 @@ const config: Config = {
                 heading: '#2C3E50',       // Heading text color
                 subheading: '#707070',    // Subheading text color
                 body: '#959595',          // Body text color
-                caption: '#7F8C8D',       // Caption or small text color
+                caption: '#575757',       // Caption or small text color
                 link: '#959595',          // Link text color
                 button: '#FFFFFF',        // Button text color
                 placeholder: '#95A5A6',   // Placeholder text color
