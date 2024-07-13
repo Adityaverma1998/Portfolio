@@ -65,18 +65,18 @@ const HeroTypo =()=>{
                 </div>
 
                 <div className={'py-20'}>
-                    <div className={'w-[84%] bg-sub-primary grid grid-cols-3 divide-x  py-6 rounded-md'}>
-                        <div className={' px-6 py-2'}>
-                            <p className={'text-2xl text-accent'}> 5+ </p>
-                            <p className={'text-xl text-light'}> Experiences</p>
+                    <div className={'w-full md:w-[84%] bg-sub-primary grid grid-cols-3 divide-x  py-6 rounded-md'}>
+                        <div className={'px-3 md:px-6 py-2'}>
+                            <p className={'text-xl md:text-2xl text-accent'}> 5+ </p>
+                            <p className={'text-base md:text-xl text-light'}> Experiences</p>
                         </div>
-                        <div className={' px-6 py-2'}>
-                            <p className={'text-2xl text-accent'}> 20+ </p>
-                            <p className={'text-xl text-light'}> Project done</p>
+                        <div className={'px-3 md:px-6 py-2'}>
+                            <p className={'text-xl md:text-2xl text-accent'}> 20+ </p>
+                            <p className={'text-base md:text-xl text-light'}> Project done</p>
                         </div>
-                        <div className={' px-6 py-2'}>
-                            <p className={'text-2xl text-accent'}> 80+ </p>
-                            <p className={'text-xl text-light'}> Happy Clients</p>
+                        <div className={'px-3 md:px-6 py-2'}>
+                            <p className={'text-xl md:text-2xll text-accent'}> 80+ </p>
+                            <p className={'text-base md:text-xl text-light'}> Happy Clients</p>
                         </div>
 
                     </div>

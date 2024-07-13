@@ -9,7 +9,7 @@ const HeroSection = ()=>{
 
                 </div>
                 <div className={''}>
-                    <div className={'h-[500px] aspect-square bg-sub-primary rounded-full flex items-center justify-center'}>
+                   <div className={'h-[300px] md:h-[500px] aspect-square bg-sub-primary rounded-full flex items-center justify-center'}>
                         <h1>hello</h1>
                     </div>
                 </div>

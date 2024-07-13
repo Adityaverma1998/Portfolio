@@ -11,7 +11,7 @@ const config: Config = {
         extend: {
             colors: {
 
-                primary: '#333333',       // Main content text color
+                primary: '#CA5900',       // Main content text color
                 secondary: '#ffffff',     // Less emphasized text color
                 accent: '#FD6F00',        // Highlighted or link text color
                 muted: '#959595',         // Subtle or disabled text color

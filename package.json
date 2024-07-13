@@ -13,12 +13,17 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.16.1",
     "@mui/material": "^5.16.1",
+    "@react-spring/web": "^9.7.3",
+    "d3-ease": "^3.0.1",
     "next": "14.2.5",
     "react": "^18",
+    "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
+    "react-move": "^6.5.0",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
+    "@types/d3-ease": "^3.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
