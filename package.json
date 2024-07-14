@@ -22,6 +22,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "react-move": "^6.5.0",
+    "react-scroll": "^1.9.0",
     "react-toastify": "^10.0.5",
     "typewriter-effect": "^2.21.0",
     "yup": "^1.4.0"
