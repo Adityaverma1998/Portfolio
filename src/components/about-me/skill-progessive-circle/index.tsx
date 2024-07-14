@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 import Image from "next/image";
+import SkillInfinitLinearMoving from "@/components/about-me/skill-infinit-linear-moving";
 
  interface SkillProgressiveCircleProps{
     icon:string;
@@ -30,6 +31,7 @@ const SkillProgressiveCircle = (props:SkillProgressiveCircleProps) => {
         };
     }, []);
 
+    console.log("Check percentage vaue are scrollProgress-----> ",scrollProgress)
     return (
         <>
             <div className={'flex flex-col justify-center items-center gap-4'}>
@@ -44,7 +46,7 @@ const SkillProgressiveCircle = (props:SkillProgressiveCircleProps) => {
                         </defs>
                     </svg>
                     <CircularProgressbar
-                        value={scrollProgress}
+                        value={percentageValue}
                         styles={buildStyles({
                             pathColor: "url(#gradient)", // Use the gradient as path color
                             trailColor: "#d6d6d6",

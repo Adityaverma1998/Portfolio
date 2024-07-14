@@ -10,7 +10,7 @@ import {socialMedia} from "@/helpers/social-media-array";
 const HeroTypo =()=>{
     return(
         <>
-            <div className={'w-full pt-20'}>
+            <div className={'w-full pt-20 '}>
                 <p className={'text-subheading text-xl  md:text-2xl font-semibold'}> Hi I am</p>
 
                 <p className={'text-2xl md:text-3xl text-body font-bold pt-2'}> Aditya Verma</p>
@@ -29,7 +29,7 @@ const HeroTypo =()=>{
 
                     </h1>
                 </div>
-                <div className={' py-14  w-[72%] md:w-1/3 flex justify-between' }>
+                <div className={' py-14  w-[72%] md:w-1/3 flex justify-between ' }>
                     {
                         socialMedia?.map((items:any,index:number)=>{
                             return  <SocialMedia key={index} icon={items?.icon} link={items?.link} />

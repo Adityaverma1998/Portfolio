@@ -2,6 +2,8 @@
 import DownloadIcon from '@mui/icons-material/Download';
 import SkillProgressiveCircle from "@/components/about-me/skill-progessive-circle";
 import 'react-circular-progressbar/dist/styles.css';
+import SkillInfinitLinearMoving from "@/components/about-me/skill-infinit-linear-moving";
+import React from "react";
 interface SkillProgressive {
     icon: string;
     percentageValue: number;
@@ -86,15 +88,17 @@ const AboutMeSection = () => {
                     </div>
                 </div>
 
-                <div className={'flex flex-wrap gap-16'}>
-                    {
-                        skills?.map((items:SkillProgressive,index: number)=>{
-                           return  <SkillProgressiveCircle key={index} icon={items.icon} percentageValue={items.percentageValue} skillName={items.skillName}/>
+{/*                <div className={'flex flex-wrap gap-16'}>*/}
+{/*                    {*/}
+{/*                        skills?.map((items:SkillProgressive,index: number)=>{*/}
+{/*                           return  <SkillProgressiveCircle key={index} icon={items.icon} percentageValue={items.percentageValue} skillName={items.skillName}/>*/}
 
-                        })
-                    }
+{/*                        })*/}
+{/*                    }*/}
 
-x                </div>
+{/*x                </div>*/}
+                <SkillInfinitLinearMoving/>
+
             </div>
         </>
     )

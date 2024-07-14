@@ -65,3 +65,57 @@ body{
 .toast-container .Toastify__close-button {
     color: #FD6F00;
 }
+.faq_overlay {
+    content: '';
+    border-radius: 100px;
+    /*background: radial-gradient(#F8E07F, #E9CF74, #C4A65B, #A88646, #936F38, #87612F, #835D2D);*/
+    box-shadow: 1px 1px 60px 38px rgba(255, 215, 120, 0.56);
+    filter: blur(20);
+    position: absolute;
+    top: 40%;
+    left: -18px;
+}
+
+
+@keyframes scrollX {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollXReverse {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.animate-scrollX {
+    animation: scrollX 30s linear infinite;
+}
+
+.animate-scrollXReverse {
+    animation: scrollXReverse 30s linear infinite;
+}
+
+.mask-image-linear-gradient {
+    -webkit-mask-image: linear-gradient(
+            to right,
+            hsl(0 0% 0% / 0),
+            hsl(0 0% 0% / 1) 10%,
+            hsl(0 0% 0% / 1) 90%,
+            hsl(0 0% 0% / 0)
+    );
+    mask-image: linear-gradient(
+            to right,
+            hsl(0 0% 0% / 0),
+            hsl(0 0% 0% / 1) 10%,
+            hsl(0 0% 0% / 1) 90%,
+            hsl(0 0% 0% / 0)
+    );
+}

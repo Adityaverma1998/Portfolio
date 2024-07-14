@@ -1,9 +1,9 @@
 "use client"
-import {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import {scroller} from 'react-scroll';
+import {scroller,Events,scrollSpy} from 'react-scroll';
 
 const HeaderSection = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -20,6 +20,19 @@ const HeaderSection = () => {
             smooth: 'easeInOutQuart',
         });
     };
+
+    useEffect(() => {
+        Events.scrollEvent.register('begin', (to, element) => {
+            setActiveLink(to);
+        });
+
+        scrollSpy.update();
+
+        return () => {
+            Events.scrollEvent.remove('begin');
+        };
+    }, []);
+
     console.log('check is open now', isOpen)
     return (
         <>
