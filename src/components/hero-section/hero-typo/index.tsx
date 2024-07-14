@@ -1,27 +1,11 @@
 "use client"
 import Typewriter from 'typewriter-effect';
 import SocialMedia from "@/components/hero-section/social-media";
+import {socialMedia} from "@/helpers/social-media-array";
 
 
 
-const socialMedia =[
-    {
-        icon:'/images/instagram.png',
-        link:'https://www.google.com'
-    },
-    {
-        icon:'/images/instagram.png',
-        link:'https://www.google.com'
-    },
-    {
-        icon:'/images/instagram.png',
-        link:'https://www.google.com'
-    },
-    {
-        icon:'/images/instagram.png',
-        link:'https://www.google.com'
-    },
-]
+
 
 const HeroTypo =()=>{
     return(
