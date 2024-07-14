@@ -31,6 +31,7 @@ const config: Config = {
 
 
             },
+
             backgroundImage: {
                 'button-gradient': 'linear-gradient(90deg, #FD6F00 0%, #E46400 100%)',
                 'heading-gradient': 'linear-gradient(90deg, #984300 0%,#FD6F00 46%, #CA5900 100%)',

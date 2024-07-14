@@ -11,8 +11,8 @@ const ContactMeSection = () => {
                         Connections: Reach Out and Connect with Me</p>
                 </div>
 
-                <div className={''}>
-                    <div className={'flex'}>
+                <div className={'py-4 md:py-6 lg:py-10'}>
+                    <div className={'flex flex-col lg:flex-row'}>
                         <MyLocationMap/>
                         <ContactForm/>
                     </div>
