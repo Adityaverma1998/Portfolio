@@ -56,6 +56,7 @@ const ContactForm = () => {
 
     return (
         <div className="w-full lg:w-[32%] mx-auto mt-10 flex flex-col justify-center ">
+            <p className={'text-2xl  text-primary font-extrabold py-4 text-center'}>Reach Out – We’re Listening!</p>
             <form onSubmit={formik.handleSubmit} className="space-y-6">
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium text-subheading">Name</label>
