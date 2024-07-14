@@ -1,3 +1,4 @@
+"use client"
 import DownloadIcon from '@mui/icons-material/Download';
 import SkillProgressiveCircle from "@/components/about-me/skill-progessive-circle";
 import 'react-circular-progressbar/dist/styles.css';
@@ -9,24 +10,38 @@ interface SkillProgressive {
 
 const skills: SkillProgressive[] = [
     {
-        icon: '/images/instagram.png',
+        icon: '/icons/icons8-react.svg',
         percentageValue: 66,
         skillName: 'Reactjs'
     },
     {
-        icon: '/images/instagram.png',
+        icon: '/icons/flutter.svg',
         percentageValue: 75,
         skillName: 'Flutter'
     },
     {
-        icon: '/images/instagram.png',
+        icon: '/icons/dart.svg',
         percentageValue: 80,
-        skillName: 'JavaScript'
+        skillName: 'Dart'
+    },
+    {
+        icon: '/icons/html.svg',
+        percentageValue: 80,
+        skillName: 'Html'
     }
     // Add more skills as needed
 ];
 
 const AboutMeSection = () => {
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/resume/Aditya_Profile.pdf'; // Path to your PDF file
+        link.download = 'aditya_profile.pdf'; // Filename for the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return (
         <>
 
@@ -61,7 +76,9 @@ const AboutMeSection = () => {
                             contribute to impactful digital solutions. Thank you for visiting my profile, and I look
                             forward to connecting with you!
                         </p>
-                        <button className={'bg-button-gradient text-button px-6 py-2 rounded-md flex items-center  my-4 md:my-8'}>
+                        <button
+                            onClick={handleDownload}
+                            className={'bg-button-gradient text-button px-6 py-2 rounded-md flex items-center  my-4 md:my-8'}>
                             <DownloadIcon className="mr-2"/>
                             Download Resume
                         </button>
@@ -72,7 +89,7 @@ const AboutMeSection = () => {
                 <div className={'flex flex-wrap gap-16'}>
                     {
                         skills?.map((items:SkillProgressive,index: number)=>{
-                           return  <SkillProgressiveCircle icon={items.icon} percentageValue={items.percentageValue} skillName={items.skillName}/>
+                           return  <SkillProgressiveCircle key={index} icon={items.icon} percentageValue={items.percentageValue} skillName={items.skillName}/>
 
                         })
                     }

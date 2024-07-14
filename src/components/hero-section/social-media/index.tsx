@@ -1,4 +1,4 @@
-import Link from "next/link";
+"use client"
 import Image from "next/image";
 import metamask from "*.svg";
 interface SocialMediaProd{
@@ -6,6 +6,8 @@ interface SocialMediaProd{
     link:string;
 }
 const SocialMedia =(props:SocialMediaProd)=>{
+
+
     return(
         <>
             {/*<div className="h-12 w-[25%] flex justify-center items-center relative">*/}

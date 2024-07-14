@@ -20,3 +20,48 @@ body{
 /*    ';*/
 /*;*/
 /*}*/
+
+/* toastStyles.css */
+.toast-container {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.toast-container .Toastify__toast--success {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #FD6F00;
+}
+
+.toast-container .Toastify__toast--error {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #FD6F00;
+}
+
+.toast-container .Toastify__toast--info {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #FD6F00;
+}
+
+.toast-container .Toastify__toast--warning {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #FD6F00;
+}
+
+.toast-container .Toastify__progress-bar {
+    background-color: #4caf50;
+}
+
+.toast-container .Toastify__progress-bar--error {
+    background-color: #f44336;
+}
+
+.toast-container .Toastify__progress-bar--info {
+    background-color: #2196f3;
+}
+
+.toast-container .Toastify__progress-bar--warning {
+    background-color: #ff9800;
+}
+
+.toast-container .Toastify__close-button {
+    color: #FD6F00;
+}

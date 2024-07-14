@@ -23,7 +23,7 @@ const config: Config = {
                 caption: '#575757',       // Caption or small text color
                 link: '#959595',          // Link text color
                 button: '#FFFFFF',        // Button text color
-                placeholder: '#95A5A6',   // Placeholder text color
+                placeholder: '#959595',   // Placeholder text color
                 error: '#E74C3C',         // Error message text color
                 success: '#2ECC71',       // Success message text color
                 warning: '#F39C12',       // Warning message text color
