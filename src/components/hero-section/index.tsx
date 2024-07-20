@@ -8,7 +8,7 @@ const HeroSection = ()=>{
                     <HeroTypo/>
 
                 </div>
-                <div className={''}>
+                <div className={'w-full lg:w-1/2'}>
                    <div className={'h-[300px] md:h-[500px] aspect-square bg-sub-primary rounded-full flex items-center justify-center'}>
                         <h1>hello</h1>
                     </div>

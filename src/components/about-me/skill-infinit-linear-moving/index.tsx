@@ -2,8 +2,10 @@
 import Image from "next/image";
 import React from "react";
 import {backendImages, frontendImages} from "@/helpers/skill";
-import { Marquee } from "@devnomic/marquee";
-import "@devnomic/marquee/dist/index.css"; //
+// import { Marquee } from "@devnomic/marquee";
+// import "@devnomic/marquee/dist/index.css"; //
+import Marquee from "react-fast-marquee";
+
 interface IImages{
     image:string,
     alt:string;
@@ -26,12 +28,12 @@ function SkillInfinitLinearMoving() {
 
                 <div className={'py-6 flex-shrink-0 flex items-center justify-around whitespace-nowrap w-full '}>
 
-                    <Marquee fade={true} className="gap-[0rem] [--duration:30s]"
-                             innerClassName="gap-[1rem] [--gap:1rem]" pauseOnHover={true}>
+                    <Marquee fade={true} className=""
+                             innerClassName="mx-3" pauseOnHover={true} gradient={true} gradientColor={'rgba(255, 255, 255, 0.04)'} gradientWidth={'200px'}>
                         {
                             frontendImages.map((item: IImages, index: number) => {
                                 return (
-                                    <div key={index} className={'flex justify-center align-middle items-center'}>
+                                    <div key={index} className={'flex justify-center align-middle items-center mx-2'}>
                                         <Image src={item.image} className={'h-4 lg:h-6 mr-2'}
                                                alt={item.alt}
                                                height={24} width={24}/>
@@ -45,12 +47,12 @@ function SkillInfinitLinearMoving() {
                 </div>
                 <div className={'flex-shrink-0 flex items-center justify-around whitespace-nowrap w-full '}>
 
-                    <Marquee fade={true} className="gap-[1rem] [--duration:30s]"
-                             innerClassName="gap-[1rem] [--gap:1rem]" pauseOnHover={true} reverse={true}>
+                    <Marquee fade={true} className=""
+                             i pauseOnHover={true} direction={'right'} gradientColor={'rgba(255, 255, 255, 0.04)'} gradientWidth={'200px'}>
                         {
                             frontendImages.map((item: IImages, index: number) => {
                                 return (
-                                    <div key={index} className={'flex justify-center align-middle items-center'}>
+                                    <div key={index} className={'flex justify-center align-middle items-center mx-2'}>
                                         <Image src={item.image} className={'h-4 lg:h-6 mr-2'}
                                                alt={item.alt}
                                                height={24} width={24}/>
