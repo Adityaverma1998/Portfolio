@@ -12,8 +12,8 @@ const ContactMeSection = () => {
                 </div>
 
                 <div className={'py-4 md:py-6 lg:py-10'}>
-                    <div className={'flex flex-col lg:flex-row'}>
-                        <MyLocationMap/>
+                    <div className={'flex justify-center items-center'}>
+                        {/*<MyLocationMap/>*/}
                         <ContactForm/>
                     </div>
                 </div>

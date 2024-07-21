@@ -50,79 +50,79 @@ const FooterSection = ()=>{
                 <div className={''}>
                     <p className={'text-2xl text-primary'}>Logo</p>
                 </div>
-                <div className={''}>
-                    <ul className="flex gap-10">
-                        <li
-                            className={`text-xl ${
-                                activeLink === 'home' ? 'text-accent font-bold' : 'text-link'
-                            } transition-text duration-250 hover:text-accent cursor-pointer`}
-                            onClick={() => {
-                                scrollToSection('home');
-                                setActiveLink('home')
-                            }}
-                        >
-                            Home
-                        </li>
-                        <li
-                            className={`text-xl ${
-                                activeLink === 'services' ? 'text-accent font-bold' : 'text-link'
-                            } transition-text duration-250 hover:text-accent cursor-pointer`}
-                            onClick={() => {
-                                scrollToSection('services');
-                                setActiveLink('services')
-                            }}
-                        >
-                            Services
-                        </li>
-                        <li
-                            className={`text-xl ${
-                                activeLink === 'about' ? 'text-accent font-bold' : 'text-link'
-                            } transition-text duration-250 hover:text-accent cursor-pointer`}
-                            onClick={() => {
-                                scrollToSection('about');
-                                setActiveLink('about');
+                {/*<div className={''}>*/}
+                {/*    <ul className="flex gap-10">*/}
+                {/*        <li*/}
+                {/*            className={`text-xl ${*/}
+                {/*                activeLink === 'home' ? 'text-accent font-bold' : 'text-link'*/}
+                {/*            } transition-text duration-250 hover:text-accent cursor-pointer`}*/}
+                {/*            onClick={() => {*/}
+                {/*                scrollToSection('home');*/}
+                {/*                setActiveLink('home')*/}
+                {/*            }}*/}
+                {/*        >*/}
+                {/*            Home*/}
+                {/*        </li>*/}
+                {/*        <li*/}
+                {/*            className={`text-xl ${*/}
+                {/*                activeLink === 'services' ? 'text-accent font-bold' : 'text-link'*/}
+                {/*            } transition-text duration-250 hover:text-accent cursor-pointer`}*/}
+                {/*            onClick={() => {*/}
+                {/*                scrollToSection('services');*/}
+                {/*                setActiveLink('services')*/}
+                {/*            }}*/}
+                {/*        >*/}
+                {/*            Services*/}
+                {/*        </li>*/}
+                {/*        <li*/}
+                {/*            className={`text-xl ${*/}
+                {/*                activeLink === 'about' ? 'text-accent font-bold' : 'text-link'*/}
+                {/*            } transition-text duration-250 hover:text-accent cursor-pointer`}*/}
+                {/*            onClick={() => {*/}
+                {/*                scrollToSection('about');*/}
+                {/*                setActiveLink('about');*/}
 
-                            }}
-                        >
-                            About me
-                        </li>
-                        <li
-                            className={`text-xl ${
-                                activeLink === 'portfolio' ? 'text-accent font-bold' : 'text-link'
-                            } transition-text duration-250 hover:text-accent cursor-pointer`}
-                            onClick={() => {
-                                scrollToSection('portfolio');
-                                setActiveLink('portfolio');
-                            }
+                {/*            }}*/}
+                {/*        >*/}
+                {/*            About me*/}
+                {/*        </li>*/}
+                {/*        <li*/}
+                {/*            className={`text-xl ${*/}
+                {/*                activeLink === 'portfolio' ? 'text-accent font-bold' : 'text-link'*/}
+                {/*            } transition-text duration-250 hover:text-accent cursor-pointer`}*/}
+                {/*            onClick={() => {*/}
+                {/*                scrollToSection('portfolio');*/}
+                {/*                setActiveLink('portfolio');*/}
+                {/*            }*/}
 
-                            }
-                        >
-                            Portfolio
-                        </li>
-                        <li
-                            className={`text-xl ${
-                                activeLink === 'contact' ? 'text-accent font-bold' : 'text-link'
-                            } transition-text duration-250 hover:text-accent cursor-pointer`}
-                            onClick={() => {
-                                scrollToSection('contact');
-                                setActiveLink('contact');
+                {/*            }*/}
+                {/*        >*/}
+                {/*            Portfolio*/}
+                {/*        </li>*/}
+                {/*        <li*/}
+                {/*            className={`text-xl ${*/}
+                {/*                activeLink === 'contact' ? 'text-accent font-bold' : 'text-link'*/}
+                {/*            } transition-text duration-250 hover:text-accent cursor-pointer`}*/}
+                {/*            onClick={() => {*/}
+                {/*                scrollToSection('contact');*/}
+                {/*                setActiveLink('contact');*/}
 
-                            }}
-                        >
-                            Contact me
-                        </li>
-                    </ul>
-                </div>
-                <div className={''}>
-                    <div className={' py-14  w-[72%] md:w-1/3 flex justify-between'}>
-                        {
-                            socialMedia?.map((items: any, index: number) => {
-                                return <SocialMedia key={index} icon={items?.icon} link={items?.link}/>
+                {/*            }}*/}
+                {/*        >*/}
+                {/*            Contact me*/}
+                {/*        </li>*/}
+                {/*    </ul>*/}
+                {/*</div>*/}
+                {/*<div className={''}>*/}
+                {/*    <div className={' py-14  w-[72%] md:w-1/3 flex justify-between'}>*/}
+                {/*        {*/}
+                {/*            socialMedia?.map((items: any, index: number) => {*/}
+                {/*                return <SocialMedia key={index} icon={items?.icon} link={items?.link}/>*/}
 
-                            })
-                        }
-                    </div>
-                </div>
+                {/*            })*/}
+                {/*        }*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <div className={' flex justify-center items-center gap-4'}>
                     <IconWrapper>
                         <Icon onClick={handleEmailClick}>

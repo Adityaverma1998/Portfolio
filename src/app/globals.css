@@ -3,9 +3,26 @@
 @tailwind utilities;
 
 
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  
+}
+
 body{
     background: #1E1E1E;
 }
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-image: linear-gradient(90deg, #984300 0%, #FD6F00 46%, #CA5900 100%);
+    transform-origin: 0%;
+}
+
 
 .text-gradient {
     background: linear-gradient(90deg, #984300 0%, #FD6F00 46%, #CA5900 100%);
@@ -123,3 +140,37 @@ body{
 /*.rfm-initial-child-container{*/
 /*    gap:1.5rem;*/
 /*}*/
+.profile-circle{
+  position: relative;
+}
+
+.profile-circle::before,.profile-circle::after{
+    content:'';
+    z-index: -1;
+    position: absolute;
+    inset: -0.5rem;
+    background: #FD6F00;
+    border-radius: inherit;
+    background: conic-gradient(
+    from
+    var(--gradient-angle),
+    #fd6e00,
+    #fd8e00,
+    #fd9e00,
+    #fdb100,
+    #fdbf06,
+    #fec927
+    );
+    animation: rotation 30s linear infinite;
+
+
+}
+
+.profile-circle::after{
+    filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+    0% {--gradient-angle:0deg;}
+    100% {--gradient-angle:360deg;}
+}

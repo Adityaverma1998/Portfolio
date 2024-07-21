@@ -36,10 +36,10 @@ const config: Config = {
                 'button-gradient': 'linear-gradient(90deg, #FD6F00 0%, #E46400 100%)',
                 'heading-gradient': 'linear-gradient(90deg, #984300 0%,#FD6F00 46%, #CA5900 100%)',
             },
-            backgroundColor:{
-                'primary':'#1E1E1E',
-                'secondary':'#575757',
-                'sub-primary':'rgba(255, 255, 255, 0.04)'
+            backgroundColor: {
+                'primary': '#1E1E1E',
+                'secondary': '#575757',
+                'sub-primary': 'rgba(255, 255, 255, 0.04)'
             },
             transitionProperty: {
                 'text': 'color',
@@ -58,8 +58,29 @@ const config: Config = {
             borderRadius: {
                 '4xl': '2rem',
             },
+            borderColor: {
+                'primary': '#959595'
+            },
+            animation: {
+                marquee: "marquee var(--duration) linear infinite",
+                "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+            },
+            keyframes: {
+                marquee: {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(calc(-100% - var(--gap)))" },
+                },
+                "marquee-vertical": {
+                    from: { transform: "translateY(0)" },
+                    to: { transform: "translateY(calc(-100% - var(--gap)))" },
+                },
+            },
+            boxShadow: {
+                'left-right-red': '10px 0 10px -2px rgba(255, 0, 0, 0.5), -10px 0 10px -2px rgba(255, 0, 0, 0.5)',
+            },
 
         },
+
     },
     plugins: [],
 };
