@@ -14,17 +14,16 @@ const ServicesCard = (props: ServicesCardProps) => {
     return (
         <>
             <motion.div
-                className="p-8 bg-sub-primary rounded-md h-[200px] w-[300px] flex flex-col items-center justify-center gap-2"
+                className="p-8 bg-sub-primary rounded-md  flex flex-col items-center justify-center gap-2"
                 initial={{
                     opacity: 0,
-                    // if odd index card,slide from right instead of left
                     x: index % 2 === 0 ? 50 : -50
                 }}
                 whileInView={{
                     opacity: 1,
-                    x: 0, // Slide in to its original position
+                    x: 0,
                     transition: {
-                        duration: 1 // Animation duration
+                        duration: 1
                     }
                 }}
                 // viewport={{ amount:'some'  }}

@@ -6,6 +6,7 @@ import SkillInfinitLinearMoving from "@/components/about-me/skill-infinit-linear
 import React from "react";
 import {motion} from "framer-motion";
 import TextRevealByWord from "@/components/magicui/text-reveal";
+import AnimatedText from "@/components/text-animation";
 interface SkillProgressive {
     icon: string;
     percentageValue: number;
@@ -34,10 +35,12 @@ const AboutMeSection = () => {
 
             <div className={'py-4 md:py-10 '}>
                 <div className={'w-full flex flex-col items-center justify-center'}>
-                    <h2 className={'text-3xl font-semibold text-secondary'}>About Me</h2>
-                    <p className={'text-lg font-normal text-subheading leading-relaxed text-center'}>Lorem ipsum dolor
-                        sit amet
-                        consectetur. Imperdiet convallis blandit felis ligula aliquam</p>
+
+                        <AnimatedText text={'About Me'} className={'text-3xl font-semibold text-secondary'} textType={'h2'}/>
+
+
+                    <AnimatedText text={'Lorem ipsum dolor sit amet\n consectetur. Imperdiet convallis blandit felis ligula aliquam'} className={'text-lg font-normal text-subheading leading-relaxed text-center'} textType={'p'}/>
+
                 </div>
                 <div className={'w-full flex flex-col md:flex-row justify-between py-10'}>
                     <div className={'flex items-center justify-center'}>

@@ -174,3 +174,55 @@ body{
     0% {--gradient-angle:0deg;}
     100% {--gradient-angle:360deg;}
 }
+
+
+.floating-image {
+    animation: floating 2s linear infinite; /* Updated animation name */
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+.floatingIMg {
+    position: absolute;
+}
+.floatingImgContainer .floatingIMg:nth-of-type(even) {
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 220ms;
+}
+.floatingImgContainer .floatingIMg:nth-of-type(odd) {
+    animation-name: floating;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 120ms;
+}
+.floatingImgContainer .floatingIMg:nth-of-type(1) {
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 120ms;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}

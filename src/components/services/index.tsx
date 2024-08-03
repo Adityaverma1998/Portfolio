@@ -9,24 +9,19 @@ interface ServicesCardInterface {
 const servicesCardSection: ServicesCardInterface[] = [
     {
         icon: '/images/app-icon.png',
-        heading: 'Service One',
-        mutedText: 'Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur',
+        heading: 'Frontend Developer',
+        mutedText: 'As a passionate Front-End Developer, I create visually stunning and user-friendly web applications. Proficient in state management with MobX and Redux, I ensure smooth, responsive designs and optimized performance. Let’s collaborate to build exceptional, high-quality digital experiences together!'},
+    {
+        icon: '/images/app-icon.png',
+        heading: 'Backend Developer',
+        mutedText: 'Experienced in backend development with Node.js, MySQL, and MongoDB. Proficient in building scalable server-side applications and optimizing database performance. Dedicated to leveraging modern technologies to craft reliable, high-performance backend solutions and seamless data integration.'
     },
     {
         icon: '/images/app-icon.png',
-        heading: 'Service Two',
-        mutedText: 'Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur',
+        heading: 'App Development',
+        mutedText: 'Passionate about hybrid app development, adept at crafting seamless and high-performance mobile applications using Flutter and React Native. Expertise in building cross-platform solutions that deliver a native-like experience, ensuring consistent performance and user engagement across both iOS and Android.',
     },
-    {
-        icon: '/images/app-icon.png',
-        heading: 'Service Three',
-        mutedText: 'Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur',
-    },
-    {
-        icon: '/images/app-icon.png',
-        heading: 'Service Three',
-        mutedText: 'Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur',
-    },
+
     // {
     //     icon: '/images/app-icon.png',
     //     heading: 'Service Three',
@@ -50,13 +45,10 @@ const ServicesSection = () => {
                         sit amet
                         consectetur. Imperdiet convallis blandit felis ligula aliquam</p>
                 </div>
-                <div className={'flex  justify-center md:justify-between  flex-wrap gap-10 py-8 md:py-16'}>
-                    {
-                        servicesCardSection?.map((items: ServicesCardInterface, index: number) => {
-                            return <ServicesCard key={index} icon={items.icon} heading={items.heading}
-                                                 mutedText={items.mutedText}/>;
-                        })
-                    }
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8 md:py-16">
+                    {servicesCardSection?.map((item, index) => (
+                        <ServicesCard key={index} icon={item.icon} heading={item.heading} mutedText={item.mutedText} index={index}/>
+                    ))}
                 </div>
 
             </div>

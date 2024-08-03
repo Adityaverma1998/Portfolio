@@ -4,9 +4,11 @@ import { useInView } from 'react-intersection-observer';
 
 interface AnimatedTextProps {
     text: string;
+    className:string;
+    textType:string;
 }
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
+const AnimatedText: React.FC<AnimatedTextProps> = ({ text,className,textType }) => {
     const controls = useAnimation();
     const { ref, inView } = useInView({
         threshold: 0.1, // Adjust the threshold as needed
@@ -54,12 +56,13 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
     };
 
     return (
-        <motion.div
+        <motion.textType
             ref={ref as React.RefObject<HTMLDivElement>}
-            style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+            // style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
             variants={container}
             initial="hidden"
             animate={controls}
+            className={className}
         >
             {words.map((word, index) => (
                 <motion.span
@@ -70,7 +73,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
                     {word}
                 </motion.span>
             ))}
-        </motion.div>
+        </motion.textType>
     );
 };
 
