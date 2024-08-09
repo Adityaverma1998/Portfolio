@@ -9,6 +9,7 @@ import ContactMeSection from "@/components/contact-me";
 import FooterSection from "@/components/footer";
 import { Element } from 'react-scroll';
 import {useScroll,motion} from "framer-motion";
+import ExpertiseCard from "@/components/expertise/expertise-card";
 
 export default function Home() {
     const { scrollYProgress } = useScroll();
@@ -44,6 +45,8 @@ export default function Home() {
                   <ContactMeSection/>
 
               </Element>
+
+
 
 
           </div>
