@@ -1,37 +1,45 @@
 import ServicesCard from "@/components/services/services-card";
+import ExpertiseCard, {IExpertiseCard} from "@/components/expertise/expertise-card";
 
-interface ServicesCardInterface {
-    icon: string;
-    heading: string;
-    mutedText: string;
+
+const jobStartDate = new Date('2022-12-01');
+const currentDate = new Date();
+
+// Calculate the difference in months
+let experienceMonths = (currentDate.getFullYear() - jobStartDate.getFullYear()) * 12;
+experienceMonths -= jobStartDate.getMonth();
+experienceMonths += currentDate.getMonth();
+
+// Convert months to years and months
+const experienceYears = Math.floor(experienceMonths / 12);
+const remainingMonths = experienceMonths % 12;
+
+// Create a dynamic experience string
+let experienceString = `${experienceYears} years`;
+if (remainingMonths > 0) {
+    experienceString += ` and ${remainingMonths} months`;
 }
 
-const servicesCardSection: ServicesCardInterface[] = [
+
+const servicesCardSection: IExpertiseCard[] = [
     {
-        icon: '/images/app-icon.png',
-        heading: 'Frontend Developer',
-        mutedText: 'As a passionate Front-End Developer, I create visually stunning and user-friendly web applications. Proficient in state management with MobX and Redux, I ensure smooth, responsive designs and optimized performance. Let’s collaborate to build exceptional, high-quality digital experiences together!'},
-    {
-        icon: '/images/app-icon.png',
-        heading: 'Backend Developer',
-        mutedText: 'Experienced in backend development with Node.js, MySQL, and MongoDB. Proficient in building scalable server-side applications and optimizing database performance. Dedicated to leveraging modern technologies to craft reliable, high-performance backend solutions and seamless data integration.'
+        logo:'/images/logos/developer.png',
+        title:'Software Development',
+        desc:"Strong knowledge in functional and OOPs, with experience in Dart, JavaScript, and TypeScript. Capable of utilizing each language's strengths to develop efficient and scalable solutions. "
     },
     {
-        icon: '/images/app-icon.png',
-        heading: 'App Development',
-        mutedText: 'Passionate about hybrid app development, adept at crafting seamless and high-performance mobile applications using Flutter and React Native. Expertise in building cross-platform solutions that deliver a native-like experience, ensuring consistent performance and user engagement across both iOS and Android.',
+        logo:'/images/logos/react-logo.png',
+        title:'Frontend Dev React, NextJS',
+        desc:`Passionate about UI/UX. Over ${experienceString}  of development experience in HTML, CSS, JS, React and NextJS frameworks..`
+    },
+    {
+        logo:'/images/logos/flutter-logo.png',
+        title:'Flutter Dev Android, iOS',
+        desc:"Skilled in developing hybrid mobile apps and cross-platform solutions using the Flutter framework."
     },
 
-    // {
-    //     icon: '/images/app-icon.png',
-    //     heading: 'Service Three',
-    //     mutedText: 'Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur',
-    // },
-    // {
-    //     icon: '/images/app-icon.png',
-    //     heading: 'Service Three',
-    //     mutedText: 'Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur',
-    // },
+
+
 ];
 
 
@@ -46,8 +54,8 @@ const ServicesSection = () => {
                         consectetur. Imperdiet convallis blandit felis ligula aliquam</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8 md:py-16">
-                    {servicesCardSection?.map((item, index) => (
-                        <ServicesCard key={index} icon={item.icon} heading={item.heading} mutedText={item.mutedText} index={index}/>
+                    {servicesCardSection?.map((item:IExpertiseCard, index) => (
+                        <ExpertiseCard key={index}  desc={item.desc} logo={item.logo} title={item.title}/>
                     ))}
                 </div>
 
