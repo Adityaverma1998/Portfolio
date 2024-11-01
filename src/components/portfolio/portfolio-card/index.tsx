@@ -2,10 +2,14 @@ interface PortfolioCardProps {
     thumbnail: string;
     name: string;
     url: string;
+    caseStudy?:string;
 }
 
 const PortfolioCard = (props:PortfolioCardProps) => {
-    const {thumbnail, name, url} = props;
+    const {thumbnail, name, url,caseStudy} = props;
+
+
+    console.log(`check caeStudy url are ${caseStudy}`);
     return (
         <>
         <div className="relative w-full md:w-80 h-64 overflow-hidden rounded-lg shadow-lg cursor-pointer group">
@@ -28,7 +32,7 @@ const PortfolioCard = (props:PortfolioCardProps) => {
                         Code
                     </a>
                     <a
-                        href={'https://files.elfsight.com/storage/f7e9a9de-578a-404d-9755-29717c16030a/e91bf5d7-a553-40ec-8315-e31ebab090ed.jpeg'}
+                        href={`${caseStudy}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300"

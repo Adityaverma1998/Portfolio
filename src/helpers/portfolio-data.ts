@@ -28,16 +28,15 @@ export const PortfolioData: PortfolioDataInterface[] = [
 
         description:'EduBlock is a verifiable credentials system allowing institutions to issue blockchain-based certificates and degrees. It supports real-time communication, tracking, bulk issuance, and API integration for third-party use. The platform includes a credential visual designer and a mobile wallet for storing and sharing credentials offline, ensuring secure, efficient credential verification.\n',
 
-        image: 'https://via.placeholder.com/300',
-        githubUrl: 'https://github.com/user/project1',
-        liveUrl: 'https://user.github.io/project1',
-        category: 'Personal'
+        image: '/project/edublock-brand.webp',
+        caseStudy:'/case-studies/EduBlock.pdf',
+        category: 'Frontend',
     },
     {
         id: 2,
         description:'EduBlock is a verifiable credentials system allowing institutions to issue blockchain-based certificates and degrees. It supports real-time communication, tracking, bulk issuance, and API integration for third-party use. The platform includes a credential visual designer and a mobile wallet for storing and sharing credentials offline, ensuring secure, efficient credential verification.\n',
 
-        name: 'Project Two',
+        name: 'Goldy',
         image: 'https://via.placeholder.com/300',
         githubUrl: 'https://github.com/user/project2',
         liveUrl: 'https://user.github.io/project2',

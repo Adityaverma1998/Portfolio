@@ -33,7 +33,7 @@ const Tabbars = () => {
             <div className="col-span-8 flex">
                 <ExpertiseItemContainer className="flex flex-wrap justify-start p-6 gap-6">
                     {filteredData && filteredData.map((item: PortfolioDataInterface, index: number) => (
-                        <PortfolioCard key={index} name={item.name} thumbnail={item.image} url={item.image}/>
+                        <PortfolioCard key={index} name={item.name} thumbnail={item.image} url={item.image} caseStudy={item.caseStudy}/>
                     ))}
                 </ExpertiseItemContainer>
             </div>
