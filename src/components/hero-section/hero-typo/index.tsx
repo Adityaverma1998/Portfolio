@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+
 export const socialMedia =[
     {
         icon:LinkedInIcon,
